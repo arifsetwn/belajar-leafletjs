@@ -2,7 +2,7 @@
 
 ## 2.1 Setup HTML
 
-Untuk memulai pembuatan web map, silakan buat file dengan nama index.html dengan isian sebagai berikut
+Untuk memulai pembuatan web map, silakan buat file dengan nama `index.html` dengan isian sebagai berikut
 
 ```
 <!DOCTYPE html>
@@ -19,17 +19,17 @@ Untuk memulai pembuatan web map, silakan buat file dengan nama index.html dengan
 </html>
 ```
 
-kode diatas merupakan struktur dasar HTML, tidak ada yang perlu dijelaskan lebih lanjut 😄
+kode diatas merupakan struktur dasar `HTML`, tidak ada yang perlu dijelaskan lebih lanjut 😄
 
 
 
 ## 2.2 Leaflet JS
 
-Untuk menambahkan library leafletjs kita perlu meng-include 2 file yaitu CSS dan Javascript
+Untuk menambahkan library leafletjs kita perlu meng-include 2 file yaitu `CSS` dan `Javascript`
 
 ### 2.2.1 CSS
 
-Tambahkan kode berikut diantara \<head>
+Tambahkan kode berikut diantara `<head>`
 
 ```
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -39,7 +39,7 @@ Tambahkan kode berikut diantara \<head>
 
 ### 2.2.2 Javascript
 
-Tambahkan kode javascript berikut dibawah kode css diatas
+Tambahkan kode `javascript` berikut dibawah kode `css` diatas
 
 ```
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -49,13 +49,13 @@ Tambahkan kode javascript berikut dibawah kode css diatas
 
 ### 2.2.3 Menambahkan map \<div>
 
-Step berikutnya adalah menambahkan element \<div> di dalam \<body>. \<div> ini kita gunakan sebagai block dari web yang akan ditampilkan. Setiap div harus memiliki id yang menyertai. Dalam tutorial ini kita gunakan id dengan nama map. Sehingga kode div menjadi
+Step berikutnya adalah menambahkan element `<div>` di dalam `<body>.` `<div>` ini kita gunakan sebagai block dari web yang akan ditampilkan. Setiap `div` harus memiliki `id` yang menyertai. Dalam tutorial ini kita gunakan `id` dengan nama `map`. Sehingga kode `div` menjadi
 
 ```
 <div id="map"> </div>
 ```
 
-agar map yang ditampilkan bisa memenuhi layar maka perlu menambahkan kode css berikut di antara \<head>
+agar map yang ditampilkan bisa memenuhi layar maka perlu menambahkan kode `css` berikut di antara `<head>`
 
 ```
 body {
@@ -76,17 +76,17 @@ Sekarang library leaflet sudah siap untuk digunakan. Untuk menampilkan map pada 
 https://www.google.com/maps/@-7.5579727,110.7696624,17z
 ```
 
-Berdasar url tersebut maka koordinat kampus UMS adalah \[-7.5579727, 110.7696624]
+Berdasar url tersebut maka koordinat kampus 1 UMS adalah \[-7.5579727, 110.7696624]
 
-Langkah selanjutnya adalah memanggil fungsi leaflet dengan menggunakan koordinat diatas. Kode yang digunakan adalah sebagai berikut dibawah \<div id="map">\</div>
+Langkah selanjutnya adalah memanggil fungsi leaflet dengan menggunakan koordinat diatas. Tambahkan kode berikut dibawah `<div id="map"></d`iv>
 
 ```
 let map = L.map("map", { center: [-7.5580281, 110.7694159], zoom: 17 });
 ```
 
-Save kemudian buka index.html melalui browser. Yang tampil hanya box dengan warna abu-abu. Untuk itu kita perlu menambahkan tile layer sesuai denga provider map yang akan digunakan. Pada tutorial ini kita akan menggunakan map dari OpenStreetMap. OpenStreetMap merupakan salah satu database gratis yang menyediakan tampilan map untuk seluruh dunia
+Save kemudian buka `index.htm`l melalui browser. Yang tampil hanya box dengan warna abu-abu. Untuk itu kita perlu menambahkan tile layer sesuai denga provider map yang akan digunakan. Pada tutorial ini kita akan menggunakan map dari OpenStreetMap. OpenStreetMap merupakan salah satu database gratis yang menyediakan tampilan map untuk seluruh dunia
 
-Tambahkan kode berikut dibawah let map untuk menggunakan map dari OpenStreetMap
+Tambahkan kode berikut dibawah `let map` untuk menggunakan map dari OpenStreetMap
 
 ```
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -96,7 +96,7 @@ Tambahkan kode berikut dibawah let map untuk menggunakan map dari OpenStreetMap
       }).addTo(map);
 ```
 
-Sehingga file index.html kita menjadi seperti berikut :&#x20;
+Sehingga file `index.html` kita menjadi seperti berikut :&#x20;
 
 ```
 <!DOCTYPE html>
@@ -145,7 +145,7 @@ Sehingga file index.html kita menjadi seperti berikut :&#x20;
 
 ```
 
-Jika kita buka file tersebut melalui browser maka akan menampilkan map dari kampus UMS
+Jika kita buka file tersebut melalui browser maka akan menampilkan map dari kampus 1 UMS
 
 ![Web Map Pertama](<../.gitbook/assets/image (4).png>)
 
@@ -155,17 +155,17 @@ Vector layer merupakan kumpulan suatu point, garis atau poligon yang dapat kita 
 
 ### 2.3.1 Menambahkan Marker
 
-Untuk menambahkan marker kita menggunakan fungsi L.marker. Fungsi ini akan membuat objek marker pada peta. Ketika membuat marker kita perlu mengetahui letak koordinat dari marker tersebut. Seperti pada saat menentukan peta kita dapat menggunakan bantuan google map untuk mencari lokasi koordinat marker. Misal kita ingin mencari koordinat titik di fakultas FKIP&#x20;
+Untuk menambahkan marker kita menggunakan fungsi `L.marker`. Fungsi ini akan membuat objek marker pada peta. Ketika membuat marker kita perlu mengetahui letak koordinat dari marker tersebut. Seperti pada saat langkah menentukan peta kita dapat menggunakan bantuan google map untuk mencari lokasi koordinat marker. Misal kita ingin mencari koordinat titik di fakultas FKIP&#x20;
 
 ![Lokasi FKIP](<../.gitbook/assets/image (2).png>)
 
 lihat pada url tersebut maka kita akan mendapatkan lokasi koordinat \[-7.5584646,110.7679351]
 
-Bagaimana jika kita ingin mencari lokasi yang belum ada di Google Map. Caranya mudah, buka lokasi tersebut melalui Google Map kemudian tekan dan tahan kursor pada titik yang akan dicari koordinatnya. Maka akan muncul popup yang berisi lokasi koordinatnya.
+Bagaimana jika kita ingin mencari lokasi yang belum ada di Google Map. Caranya cukup mudah, buka lokasi tersebut melalui Google Map kemudian tekan dan tahan kursor pada titik yang akan dicari koordinatnya. Maka akan muncul popup yang berisi lokasi koordinatnya.
 
 ![Mencari lokasi koordinat](../.gitbook/assets/image.png)
 
-Setelah mengetahui titik koordinat maka langkah selanjutnya kita bisa membuat kode seperti berikut. Letakkan kode berikut setelah kode pembuatan tilelayer dan sebelum \</body>
+Setelah mengetahui titik koordinat maka langkah selanjutnya kita bisa membuat kode seperti berikut. Letakkan kode berikut setelah kode pembuatan `tilelayer` dan sebelum `</body>`
 
 ```
 let marker_fkip = L.marker([-7.5584646,110.7679351]).addTo(map);
@@ -179,6 +179,6 @@ Agar lebih interaktif, biasanya marker kalau kita klik akan muncul pop up yang m
   marker_fkip.bindPopup("<b>Kampus FKIP</b><br>Universitas Muhammadiyah Surakarta").openPopup();
 ```
 
-Buka file index.html melalui browser maka bentuk map yang kita buat dapat dilihat pada codepen berikut. Untuk melihat kode lengkapnya klik pada button HTML
+Buka file index.html melalui browser maka bentuk map yang kita buat dapat dilihat pada tampilan berikut. Untuk melihat kode lengkapnya klik pada button HTML
 
 {% embed url="https://codepen.io/cyanohumanos/pen/jOGqEmQ" %}
