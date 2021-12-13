@@ -11,6 +11,6 @@ Secara garis besar web map terdiri dari 2 kategori yaitu :&#x20;
 
 ## 1.2 Leaflet
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (1).png>)
 
 Leaflet merupakan librari javascript yang bersifat opensource untuk membuat web map yang interaktif. Leaflet pertama kali diluncurkan pada tahun 2011. Leaflet ini termasuk librari yang ringan, simpel dan fleksibel.  Pada saat tutorial ini ditulis versi terbaru leaflet.js ada di versi 17.1
