@@ -157,13 +157,13 @@ Vector layer merupakan kumpulan suatu point, garis atau poligon yang dapat kita 
 
 Untuk menambahkan marker kita menggunakan fungsi `L.marker`. Fungsi ini akan membuat objek marker pada peta. Ketika membuat marker kita perlu mengetahui letak koordinat dari marker tersebut. Seperti pada saat langkah menentukan peta kita dapat menggunakan bantuan google map untuk mencari lokasi koordinat marker. Misal kita ingin mencari koordinat titik di fakultas FKIP&#x20;
 
-![Lokasi FKIP](<../.gitbook/assets/image (2) (1).png>)
+![Lokasi FKIP](<../.gitbook/assets/image (2) (1) (1).png>)
 
 lihat pada url tersebut maka kita akan mendapatkan lokasi koordinat \[-7.5584646,110.7679351]
 
 Bagaimana jika kita ingin mencari lokasi yang belum ada di Google Map. Caranya cukup mudah, buka lokasi tersebut melalui Google Map kemudian tekan dan tahan kursor pada titik yang akan dicari koordinatnya. Maka akan muncul popup yang berisi lokasi koordinatnya.
 
-![Mencari lokasi koordinat](<../.gitbook/assets/image (2).png>)
+![Mencari lokasi koordinat](<../.gitbook/assets/image (2) (1).png>)
 
 Setelah mengetahui titik koordinat maka langkah selanjutnya kita bisa membuat kode seperti berikut. Letakkan kode berikut setelah kode pembuatan `tilelayer` dan sebelum `</body>`
 
