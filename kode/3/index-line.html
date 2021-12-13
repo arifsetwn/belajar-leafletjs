@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      let map = L.map("map", { center: [-7.5580281, 110.7694159], zoom: 17 });
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="http://' +
+          'www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+
+      let marker_fkip = L.marker([-7.5584646, 110.7679351]).addTo(map);
+
+      marker_fkip
+        .bindPopup("<b>Kampus FKIP</b><br>Universitas Muhammadiyah Surakarta")
+        .openPopup();
+
+      let line = L.polyline(
+        [
+          [-7.5584646, 110.7679351],
+          [-7.558406, 110.7683359],
+          [-7.559507, 110.7680997],
+          [-7.558842, 110.7708997],
+        ],
+        { color: "red", weight: 10 }
+      ).addTo(map);
+
+    </script>
+  </body>
+</html>
